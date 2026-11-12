@@ -3,7 +3,6 @@ package com.poupa.vinylmusicplayer.ui.activities.bugreport;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -28,8 +27,6 @@ public class BugReportActivity extends AbsThemeActivity {
     private TextView textDeviceInfo;
 
     private FloatingActionButton sendFab;
-
-    private static final String ISSUE_TRACKER_LINK = "https://github.com/VinylMusicPlayer/VinylMusicPlayer/issues/new?assignees=&labels=bug&template=bug_report.md&title=";
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -82,10 +79,13 @@ public class BugReportActivity extends AbsThemeActivity {
     private void reportIssue() {
         copyDeviceInfoToClipBoard();
 
-        final Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(ISSUE_TRACKER_LINK));
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        // Needle has no public issue tracker configured yet. Let the user choose
+        // where to send the report rather than filing fork bugs against Vinyl.
+        final Intent intent = new Intent(Intent.ACTION_SEND)
+                .setType("text/plain")
+                .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name) + " - " + getString(R.string.report_an_issue))
+                .putExtra(Intent.EXTRA_TEXT, textDeviceInfo.getText().toString());
+        startActivity(Intent.createChooser(intent, getString(R.string.report_an_issue)));
     }
 
     private void copyDeviceInfoToClipBoard() {

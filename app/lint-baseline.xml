@@ -1,0 +1,4553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.5.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.5.1)" variant="all" version="9.5.1">
+
+    <issue
+        id="RecyclerView"
+        message="Do not treat position as fixed; only use immediately and call `holder.getAdapterPosition()` to look it up later"
+        errorLine1="    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {"
+        errorLine2="                                                             ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/PlaylistAdapter.java"
+            line="91"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String strippedQuery = StringUtil.stripAccent(query.toLowerCase());"
+        errorLine2="                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/AlbumLoader.java"
+            line="27"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            final String strippedAlbum = StringUtil.stripAccent(album.getTitle().toLowerCase());"
+        errorLine2="                                                                                 ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/AlbumLoader.java"
+            line="31"
+            column="82"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String strippedQuery = StringUtil.stripAccent(query.toLowerCase());"
+        errorLine2="                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/ArtistLoader.java"
+            line="27"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            final String strippedArtist = StringUtil.stripAccent(artist.getName().toLowerCase());"
+        errorLine2="                                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/ArtistLoader.java"
+            line="31"
+            column="83"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                return uri.substring(dotPos + 1).toLowerCase();"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/FileUtil.java"
+            line="100"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        return String.valueOf(name.charAt(0)).toUpperCase();"
+        errorLine2="                                              ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/GenreAdapter.java"
+            line="89"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String lowercaseSearchTerm = genreNameSearchTerm.toLowerCase();"
+        errorLine2="                                                               ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/GenreLoader.java"
+            line="52"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            if (genre.name.toLowerCase().contains(lowercaseSearchTerm)) {"
+        errorLine2="                           ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/GenreLoader.java"
+            line="56"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                first.name.toLowerCase(),"
+        errorLine2="                           ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/GenreLoader.java"
+            line="77"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                second.name.toLowerCase());"
+        errorLine2="                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/GenreLoader.java"
+            line="78"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        holder.title.setText(title.toUpperCase());"
+        errorLine2="                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/ImageTheme/MaterialTheme.java"
+            line="48"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String normName = name.trim().toLowerCase();"
+        errorLine2="                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/MusicUtil.java"
+            line="336"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        String lowerCaseTitle = strippedTitle.toLowerCase();"
+        errorLine2="                                              ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/MusicUtil.java"
+            line="352"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String lowercaseSearchTerm = playlistNameSearchTerm.toLowerCase();"
+        errorLine2="                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/PlaylistSongLoader.java"
+            line="51"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                first.name.toLowerCase(),"
+        errorLine2="                           ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/PlaylistSongLoader.java"
+            line="78"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                second.name.toLowerCase());"
+        errorLine2="                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/PlaylistSongLoader.java"
+            line="79"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="      data[0] = data[0].substring(13, data[0].length() - 1).toUpperCase();"
+        errorLine2="                                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/discog/tagging/ReplayGainTagExtractor.java"
+            line="79"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        Function&lt;String, String> normalize = (s) -> StringUtil.stripAccent(s).toLowerCase();"
+        errorLine2="                                                                              ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/SearchQueryHelper.java"
+            line="30"
+            column="79"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                holder.title.setText(activity.getResources().getString(R.string.action_shuffle_all).toUpperCase());"
+        errorLine2="                                                                                                    ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/ShuffleButtonSongAdapter.java"
+            line="54"
+            column="101"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        final String strippedQuery = StringUtil.stripAccent(query.toLowerCase());"
+        errorLine2="                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/SongLoader.java"
+            line="27"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            final String strippedTitle = StringUtil.stripAccent(song.title.toLowerCase());"
+        errorLine2="                                                                           ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/loader/SongLoader.java"
+            line="31"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        return String.valueOf(name.charAt(0)).toUpperCase();"
+        errorLine2="                                              ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/sort/SortOrder.java"
+            line="68"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                    String attr = attrMatcher.group(1).toLowerCase().trim();"
+        errorLine2="                                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/model/lyrics/SynchronizedLyricsLRC.java"
+            line="31"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                    String value = attrMatcher.group(2).toLowerCase().trim();"
+        errorLine2="                                                        ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/model/lyrics/SynchronizedLyricsLRC.java"
+            line="32"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;player_content&quot; in layout &quot;fragment_card_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                android:id=&quot;@+id/player_content&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_card_player.xml"
+            line="32"
+            column="17"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;album_cover_container&quot; in layout &quot;fragment_card_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                    android:id=&quot;@+id/album_cover_container&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_card_player.xml"
+            line="38"
+            column="21"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;current_song&quot; in layout &quot;fragment_card_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                            android:id=&quot;@+id/current_song&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_card_player.xml"
+            line="127"
+            column="29"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;player_content&quot; in layout &quot;fragment_flat_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                android:id=&quot;@+id/player_content&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player.xml"
+            line="40"
+            column="17"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;album_cover_container&quot; in layout &quot;fragment_flat_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                    android:id=&quot;@+id/album_cover_container&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player.xml"
+            line="45"
+            column="21"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;current_song&quot; in layout &quot;fragment_flat_player&quot; is missing from the following layout configurations: layout-land (present in layout)"
+        errorLine1="                        android:id=&quot;@+id/current_song&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player.xml"
+            line="112"
+            column="25"
+            message="Occurrence in layout"/>
+    </issue>
+
+    <issue
+        id="LocaleFolder"
+        message="The locale folder &quot;`he`&quot; should be called &quot;`iw`&quot; instead; see the `java.util.Locale` documentation">
+        <location
+            file="src/main/res/values-he"/>
+    </issue>
+
+    <issue
+        id="LocaleFolder"
+        message="The locale folder &quot;`id`&quot; should be called &quot;`in`&quot; instead; see the `java.util.Locale` documentation">
+        <location
+            file="src/main/res/values-id"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="        final long id = cursor.getLong(cursor.getColumnIndex(SongPlayCountColumns.ID));"
+        errorLine2="                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/provider/SongPlayCountStore.java"
+            line="180"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="        final int lastUpdatedWeek = cursor.getInt(cursor.getColumnIndex(SongPlayCountColumns.LAST_UPDATED_WEEK_INDEX));"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/provider/SongPlayCountStore.java"
+            line="184"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Branch must run from `@WorkerThread`, incompatible with the other that must run from `@{Main,Ui}Thread`"
+        errorLine1="        } else if (itemId == R.id.action_share) {"
+        errorLine2="               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/AbsPlayerFragment.java"
+            line="136"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Branch must run from `@{Main,Ui}Thread`, incompatible with the other that must run from `@WorkerThread`"
+        errorLine1="        } else if (id == R.id.action_add_to_playlist) {"
+        errorLine2="               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/AlbumDetailActivity.java"
+            line="291"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Branch must run from `@{Main,Ui}Thread`, incompatible with the other that must run from `@WorkerThread`"
+        errorLine1="        } else if (id == R.id.action_add_to_playlist) {"
+        errorLine2="               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/ArtistDetailActivity.java"
+            line="320"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Branch must run from `@{Main,Ui}Thread`, incompatible with the other that must run from `@WorkerThread`"
+        errorLine1="        } else if (id == android.R.id.home) {"
+        errorLine2="               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/GenreDetailActivity.java"
+            line="133"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Statement must run from `@WorkerThread`, incompatible with earlier code that must run from `@{Main,Ui}Thread`"
+        errorLine1="        super.onDestroy();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/GenreDetailActivity.java"
+            line="178"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Call must be from `@WorkerThread`, but super method `Fragment.onOptionsItemSelected(…)` is allowing `@{Main,Ui}Thread`"
+        errorLine1="            MusicPlayerRemote.openAndShuffleQueue(Discography.getInstance().getAllSongs(null), true);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/LibraryFragment.java"
+            line="235"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Statement must run from `@WorkerThread`, incompatible with earlier code that must run from `@{Main,Ui}Thread`"
+        errorLine1="        handlePlaybackIntent(getIntent());"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/MainActivity.java"
+            line="240"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Call must be from `@WorkerThread`, but super method `MediaBrowserServiceCompat.onDestroy(…)` is allowing `@{Main,Ui}Thread`"
+        errorLine1="        quit();"
+        errorLine2="        ~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="390"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Statement must run from `@{Main,Ui}Thread`, incompatible with earlier code that must run from `@WorkerThread`"
+        errorLine1="            return super.onSongMenuItemClick(item);"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="244"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Statement must run from `@WorkerThread`, incompatible with earlier code that must run from `@{Main,Ui}Thread`"
+        errorLine1="            MusicPlayerRemote.removeFromQueue(position);"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="287"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Statement must run from `@WorkerThread`, incompatible with earlier code that must run from `@{Main,Ui}Thread`"
+        errorLine1="        super.onDestroy();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/PlaylistDetailActivity.java"
+            line="268"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Branch must run from `@{Main,Ui}Thread`, incompatible with the other that must run from `@WorkerThread`"
+        errorLine1="        } else if (itemId == R.id.action_add_to_playlist) {"
+        errorLine2="               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/menu/PlaylistMenuHelper.java"
+            line="75"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Expression results in an unsatisfiable thread requirement (`@WorkerThread`, after inferred `@{Main,Ui}Thread`)"
+        errorLine1="                            return onSongMenuItemClick(item, getSong().albumId) || super.onMenuItemClick(item);"
+        errorLine2="                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/SearchAdapter.java"
+            line="160"
+            column="84"/>
+    </issue>
+
+    <issue
+        id="ThreadConstraint"
+        message="Expression results in an unsatisfiable thread requirement (`@WorkerThread`, after inferred `@{Main,Ui}Thread`)"
+        errorLine1="                    return onSongMenuItemClick(item) || super.onMenuItemClick(item);"
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/SongAdapter.java"
+            line="259"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="DefaultUncaughtExceptionDelegation"
+        message="Must call `getDefaultUncaughtExceptionHandler()` to get the existing handler, and call `existingHandler.uncaughtException(thread, throwable)` from your new handler"
+        errorLine1="        Thread.setDefaultUncaughtExceptionHandler(new OopsHandler(this));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/base/AbsThemeActivity.java"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DefaultUncaughtExceptionDelegation"
+        message="Must call `getDefaultUncaughtExceptionHandler()` to get the existing handler, and call `existingHandler.uncaughtException(thread, throwable)` from your new handler"
+        errorLine1="        Thread.setDefaultUncaughtExceptionHandler(null);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/base/AbsThemeActivity.java"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="                &lt;fragment"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_card_player.xml"
+            line="32"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="                    &lt;fragment"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_card_player.xml"
+            line="43"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="                &lt;fragment"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_card_player.xml"
+            line="51"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="                    &lt;fragment"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_card_player.xml"
+            line="64"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="            &lt;fragment"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_flat_player.xml"
+            line="40"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="                    &lt;fragment"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player.xml"
+            line="49"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="            &lt;fragment"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_flat_player.xml"
+            line="55"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="            &lt;fragment"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player.xml"
+            line="80"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="        &lt;fragment"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/sliding_music_panel_layout.xml"
+            line="28"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        final View view = inflater.inflate(R.layout.preference_dialog_export_settings, null);"
+        errorLine2="                                                                                       ~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/preferences/ExportSettingsPreferenceDialog.java"
+            line="42"
+            column="88"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = getActivity().getLayoutInflater().inflate(R.layout.preference_dialog_library_categories, null);"
+        errorLine2="                                                                                                             ~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/preferences/LibraryPreferenceDialog.java"
+            line="31"
+            column="110"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            final View customView = LayoutInflater.from(context).inflate(R.layout.dialog_markdown_view, null);"
+        errorLine2="                                                                                                        ~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/MarkdownViewDialog.java"
+            line="97"
+            column="105"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = getActivity().getLayoutInflater().inflate(R.layout.preference_dialog_rg_preamp, null);"
+        errorLine2="                                                                                                    ~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/preferences/PreAmpPreferenceDialog.java"
+            line="34"
+            column="101"/>
+    </issue>
+
+    <issue
+        id="SQLiteString"
+        message="Using column type STRING; did you mean to use TEXT? (STRING is a numeric type and its value can be adjusted; for example, strings that look like integers can drop leading zeroes. See issue explanation for details.)"
+        errorLine1="        db.execSQL(&quot;CREATE TABLE IF NOT EXISTS &quot; + BlacklistStoreColumns.NAME + &quot; (&quot;"
+        errorLine2="        ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/provider/BlacklistStore.java"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of Gradle than 9.6.0 is available: 9.9.1"
+        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-9.6.0-bin.zip"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="$HOME/.local/share/opencode/worktree/3367b9/needle-modernization/gradle/wrapper/gradle-wrapper.properties"
+            line="4"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.gridlayout:gridlayout than 1.0.0 is available: 1.1.0"
+        errorLine1="    implementation &apos;androidx.gridlayout:gridlayout:1.0.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="132"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media:media than 1.7.0 is available: 1.8.0"
+        errorLine1="    implementation &apos;androidx.media:media:1.7.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="133"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.palette:palette-ktx than 1.0.0 is available: 1.1.0"
+        errorLine1="    implementation &apos;androidx.palette:palette-ktx:1.0.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="134"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.afollestad.material-dialogs:core than 0.9.6.0 is available: 3.3.0"
+        errorLine1="    implementation &apos;com.afollestad.material-dialogs:core:0.9.6.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="140"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.N_MR1)` instead of `@TargetApi` to propagate the requirement to users of `BaseShortcutType`"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/BaseShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.N_MR1)` instead of `@TargetApi` to propagate the requirement to users of `DynamicShortcutManager`"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/DynamicShortcutManager.java"
+            line="22"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.N_MR1)` instead of `@TargetApi` to propagate the requirement to users of `LastAddedShortcutType`"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/LastAddedShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.LOLLIPOP)` instead of `@TargetApi` to propagate the requirement to callers of `isTreeUriSaved`"
+        errorLine1="    @TargetApi(Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/SAFUtil.java"
+            line="67"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.LOLLIPOP)` instead of `@TargetApi` to propagate the requirement to callers of `isSDCardAccessGranted`"
+        errorLine1="    @TargetApi(Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/SAFUtil.java"
+            line="72"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.N_MR1)` instead of `@TargetApi` to propagate the requirement to users of `ShuffleAllShortcutType`"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/ShuffleAllShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseRequiresApi"
+        message="Use `@RequiresApi(Build.VERSION_CODES.N_MR1)` instead of `@TargetApi` to propagate the requirement to users of `TopTracksShortcutType`"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/TopTracksShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;label_replay_gain&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;label_replay_gain&quot; translatable=&quot;false&quot;>ReplayGain&lt;/string>"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="63"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;label_replay_gain&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;it&quot; (Italian) here"
+        errorLine1=" &lt;string name=&quot;label_replay_gain&quot; translatable=&quot;false&quot;>ReplayGain&lt;/string> "
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-it/strings.xml"
+            line="64"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_1&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_1&quot; translatable=&quot;false&quot;>1&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="213"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_2&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_2&quot; translatable=&quot;false&quot;>2&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="214"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_3&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_3&quot; translatable=&quot;false&quot;>3&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="215"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_4&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_4&quot; translatable=&quot;false&quot;>4&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="216"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_5&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_5&quot; translatable=&quot;false&quot;>5&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="217"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_6&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_6&quot; translatable=&quot;false&quot;>6&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="218"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_7&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_7&quot; translatable=&quot;false&quot;>7&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="219"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;grid_size_8&quot; is marked as translatable=&quot;false&quot;, but is translated to &quot;pt&quot; (Portuguese) here"
+        errorLine1="    &lt;string name=&quot;grid_size_8&quot; translatable=&quot;false&quot;>8&lt;/string>"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pt-rBR/strings.xml"
+            line="220"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;songs&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;about_to_add_x_titles_to_playing_queue&quot;>About to add %1$d songs into the playing queue.\nHow do you want to proceed with these songs?&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="32"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;songs&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;added_x_titles_to_playing_queue&quot;>Added %1$d songs to the playing queue.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;songs&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;added_x_titles_to_playlist&quot;>Added %1$d songs to the playlist.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="38"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;songs&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;inserted_x_songs_into_playlist_x&quot;>Inserted %1$d songs into the playlist %2$s.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="93"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;songs&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;deleted_x_songs&quot;>Deleted %1$d songs.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="95"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;days&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;past_X_days&quot;>Past %d days&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="134"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;weeks&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;past_X_weeks&quot;>Past %d weeks&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="135"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;months&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;past_X_months&quot;>Past %d months&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="136"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;years&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;past_X_years&quot;>Past %d years&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="137"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;selected&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;x_selected&quot;>%1$d selected&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="183"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;minutes&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;sleep_timer_set&quot;>Sleep timer set for %d minutes from now.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="229"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;playlists&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;saved_x_playlists_to_x&quot;>Saved %1$d playlists to %2$s.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="288"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;playlists&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;saved_x_playlists_to_x_failed_to_save_x&quot;>Saved %1$d playlists to %2$s, failed to save %3$d.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="289"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;playlists&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;imported_x_playlists&quot;>&quot;Imported %d playlists&quot;&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="290"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;playlists&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;imported_x_skipped_x_playlists&quot;>&quot;Imported %1$d playlists, skipped %2$d&quot;&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="291"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;files&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;scanned_files&quot;>Scanned %1$d of %2$d files.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="295"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;files&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;could_not_scan_files&quot;>Could not scan %d files.&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="296"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;tracks&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;scanning_x_songs_added&quot;>&quot;%1$d tracks added&quot;&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="297"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;tracks&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;scanning_x_songs_updated&quot;>&quot;%1$d tracks updated&quot;&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="298"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;tracks&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;scanning_x_songs_removed&quot;>&quot;%1$d tracks removed&quot;&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="299"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnsafeProtectedBroadcastReceiver"
+        message="This broadcast receiver declares an intent-filter for a protected broadcast action string, which can only be sent by the system, not third-party applications. However, the receiver&apos;s `onReceive` method does not appear to call `getAction` to ensure that the received Intent&apos;s action string matches the expected value, potentially making it possible for another actor to send a spoofed intent with no action string or a different action string and cause undesired behavior."
+        errorLine1="    public void onReceive(final Context context, Intent intent) {"
+        errorLine2="                ~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appwidgets/BootReceiver.java"
+            line="14"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ExportedService"
+        message="Exported service does not require permission"
+        errorLine1="        &lt;service"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="142"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="DataExtractionRules"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and the default allows backup"
+        errorLine1="        android:allowBackup=&quot;true&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="25"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/base/AbsMultiSelectAdapter.java"
+            line="74"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/base/AbsMultiSelectAdapter.java"
+            line="118"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/album/AlbumAdapter.java"
+            line="77"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/album/AlbumAdapter.java"
+            line="82"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/album/AlbumAdapter.java"
+            line="87"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/AlbumDetailActivity.java"
+            line="350"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/AlbumDetailActivity.java"
+            line="358"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        getAdapter().notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/pager/AlbumsFragment.java"
+            line="92"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/artist/ArtistAdapter.java"
+            line="67"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/artist/ArtistAdapter.java"
+            line="76"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        getAdapter().notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/pager/ArtistsFragment.java"
+            line="122"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/CategoryInfoAdapter.java"
+            line="72"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/GenreAdapter.java"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/GenreDetailActivity.java"
+            line="151"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/GenreDetailActivity.java"
+            line="159"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/OrderablePlaylistSongAdapter.java"
+            line="120"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/OrderablePlaylistSongAdapter.java"
+            line="125"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="108"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="113"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="146"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="151"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/PlaylistAdapter.java"
+            line="70"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/PlaylistDetailActivity.java"
+            line="227"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/PlaylistDetailActivity.java"
+            line="235"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SearchActivity.java"
+            line="173"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        adapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SearchActivity.java"
+            line="181"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/SearchAdapter.java"
+            line="53"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/SongAdapter.java"
+            line="86"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/SongAdapter.java"
+            line="95"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/SongFileAdapter.java"
+            line="70"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        getAdapter().notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/pager/SongsFragment.java"
+            line="76"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        getAdapter().notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/pager/SongsFragment.java"
+            line="84"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        getAdapter().notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/mainactivity/library/pager/SongsFragment.java"
+            line="150"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="            stream = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/glide/audiocover/AbsCoverFetcher.java"
+            line="100"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 29"
+        errorLine1="    @RequiresApi(Build.VERSION_CODES.Q)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/glide/audiocover/AbsCoverFetcher.java"
+            line="122"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/AbsNotification.java"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 26"
+        errorLine1="    @RequiresApi(Build.VERSION_CODES.O)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/AbsNotification.java"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/base/AbsSlidingMusicPanelActivity.java"
+            line="289"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= VERSION_CODES.R) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/tageditor/AbsTagEditorActivity.java"
+            line="170"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.Q) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/tageditor/AbsTagEditorActivity.java"
+            line="194"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/tageditor/AbsTagEditorActivity.java"
+            line="374"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/base/AbsThemeActivity.java"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/base/AbsThemeActivity.java"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/AddToPlaylistDialog.java"
+            line="73"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@RequiresApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/AppShortcutIconGenerator.java"
+            line="22"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/AppShortcutIconGenerator.java"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/ArtistSongAdapter.java"
+            line="104"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appwidgets/base/BaseAppWidget.java"
+            line="147"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/BaseShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/BlacklistFolderChooserDialog.java"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `Build.VERSION.SDK_INT >= Build.VERSION_CODES.M` is never true here"
+        errorLine1="        } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/BlacklistFolderChooserDialog.java"
+            line="89"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="            if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.O) { // not allowed on Oreo"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appwidgets/BootReceiver.java"
+            line="23"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/card/CardPlayerFragment.java"
+            line="240"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/card/CardPlayerFragment.java"
+            line="296"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/helper/DeleteSongsDialogApi19.java"
+            line="208"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 30"
+        errorLine1="@RequiresApi(api = VERSION_CODES.R)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/helper/DeleteSongsDialogApi30.java"
+            line="39"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.R) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/helper/DeleteSongsHelper.java"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.R) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/dialogs/helper/DeleteSongsHelper.java"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="    private final String[] abis = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ?"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/bugreport/model/DeviceInfo.java"
+            line="28"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="    private final String[] abis32Bits = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ?"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/bugreport/model/DeviceInfo.java"
+            line="31"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="    private final String[] abis64Bits = Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ?"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/bugreport/model/DeviceInfo.java"
+            line="34"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/discog/Discography.java"
+            line="358"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/DynamicShortcutManager.java"
+            line="22"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 21"
+        errorLine1="    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/preferences/ExportSettingsPreferenceDialog.java"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/ImageTheme/FlatTheme.java"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/IdleNotification.java"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/IdleNotification.java"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/ImageUtil.java"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/LastAddedShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/MainActivity.java"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP &amp;&amp; image != null) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/base/MediaEntryViewHolder.java"
+            line="214"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MultiPlayer.java"
+            line="89"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 28"
+        errorLine1="    @RequiresApi(api = Build.VERSION_CODES.P)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MultiPlayer.java"
+            line="338"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 26"
+        errorLine1="    @RequiresApi(Build.VERSION_CODES.O)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="145"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 26"
+        errorLine1="    @RequiresApi(Build.VERSION_CODES.O)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="183"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="223"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="255"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="628"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N &amp;&amp; !PreferenceUtil.getInstance().classicNotification()) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="636"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="743"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="            if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.R) {return false;}"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/MusicService.java"
+            line="1340"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="            if (Build.VERSION.SDK_INT &lt; VERSION_CODES.Q) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/MusicUtil.java"
+            line="247"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `Build.VERSION.SDK_INT == VERSION_CODES.Q` is never true here"
+        errorLine1="            else if (Build.VERSION.SDK_INT == VERSION_CODES.Q) {"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/MusicUtil.java"
+            line="253"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.R) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/MusicUtil.java"
+            line="271"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.M || (flags &amp; PendingIntent.FLAG_MUTABLE) != 0)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/PendingIntentCompat.java"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.M || (flags &amp; PendingIntent.FLAG_MUTABLE) != 0)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/PendingIntentCompat.java"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.M || (flags &amp; PendingIntent.FLAG_MUTABLE) != 0)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/PendingIntentCompat.java"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/PlayingNotificationImplApi24.java"
+            line="108"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.O` is never true here"
+        errorLine1="                            if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.O &amp;&amp; PreferenceUtil.getInstance().coloredNotification())"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/service/notification/PlayingNotificationImplApi24.java"
+            line="120"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.P) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/PlaylistsUtil.java"
+            line="147"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 29"
+        errorLine1="    @RequiresApi(Build.VERSION_CODES.Q)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/PlaylistsUtil.java"
+            line="165"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/RingtoneManager.java"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/RingtoneManager.java"
+            line="36"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="                .description(Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.N_MR1 ?"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/saf/SAFGuideActivity.java"
+            line="26"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; VERSION_CODES.R) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/saf/SAFGuideActivity.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 21"
+        errorLine1="    @TargetApi(Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/SAFUtil.java"
+            line="67"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 21"
+        errorLine1="    @TargetApi(Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/SAFUtil.java"
+            line="72"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="306"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="                if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="386"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="                if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.N) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="404"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="418"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="                if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.N_MR1) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="432"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SettingsActivity.java"
+            line="576"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/ShuffleAllShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 21"
+        errorLine1="    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/discog/SnackbarUtil.java"
+            line="40"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.LOLLIPOP) {return message;}"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/discog/SnackbarUtil.java"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/views/StatusBarMarginFrameLayout.java"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/views/StatusBarView.java"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 25"
+        errorLine1="@TargetApi(Build.VERSION_CODES.N_MR1)"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/appshortcuts/shortcuttype/TopTracksShortcutType.java"
+            line="15"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/ViewUtil.java"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 34"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/ViewUtil.java"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is never &lt; 34"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/VinylMusicPlayerColorUtil.java"
+            line="78"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.P` is never true here"
+        errorLine1="        } else if (Build.VERSION.SDK_INT &lt;= Build.VERSION_CODES.P) {"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/util/VinylMusicPlayerColorUtil.java"
+            line="81"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `drawable`.">
+        <location
+            file="src/main/res/drawable-v21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `drawable`.">
+        <location
+            file="src/main/res/drawable-v26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <location
+            file="src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 21"
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;lollipop&quot;>@color/splash_background&lt;/item>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="56"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v19`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `values`.">
+        <location
+            file="src/main/res/values-v19"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v21`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `values`.">
+        <location
+            file="src/main/res/values-v21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v23`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `values`.">
+        <location
+            file="src/main/res/values-v23"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v27`) is unnecessary; `minSdkVersion` is 34. Merge all the resources in this folder into `values`.">
+        <location
+            file="src/main/res/values-v27"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="This `AsyncTask` class should be static or leaks might occur (anonymous android.os.AsyncTask)"
+        errorLine1="        updateIsFavoriteTask = new AsyncTask&lt;Song, Void, Boolean>() {"
+        errorLine2="                               ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/AbsPlayerFragment.java"
+            line="301"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="This `AsyncTask` class should be static or leaks might occur (anonymous android.os.AsyncTask)"
+        errorLine1="        updateLyricsAsyncTask = new AsyncTask&lt;Void, Void, Lyrics>() {"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/AbsPlayerFragment.java"
+            line="334"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `App` which has field `context` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static App app;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/App.java"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context context;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/App.java"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `BlacklistStore` which has field `context` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static BlacklistStore sInstance = null;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/provider/BlacklistStore.java"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="117"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="147"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="177"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="78"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="108"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="138"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="17"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="KaptUsageInsteadOfKsp"
+        message="This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp"
+        errorLine1="    kapt &apos;com.github.bumptech.glide:compiler:5.0.9&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="146"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="        android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_library_categories_listitem.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/black` with a theme that also paints a background (inferred theme is `@style/Theme.VinylMusicPlayer.Light`)"
+        errorLine1="    android:background=&quot;@android:color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/app_widget_big.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `?rectSelector` with a theme that also paints a background (inferred theme is `@style/Theme.VinylMusicPlayer.Light`)"
+        errorLine1="    android:background=&quot;?rectSelector&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bread_crumb.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/black` with a theme that also paints a background (inferred theme is `@style/Theme.VinylMusicPlayer.Light`)"
+        errorLine1="    android:background=&quot;@android:color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_album_cover.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `?cardBackgroundColor` with a theme that also paints a background (inferred theme is `@style/Theme.VinylMusicPlayer.Light`)"
+        errorLine1="    android:background=&quot;?cardBackgroundColor&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_mini_player.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.seventy_percent_black_overlay` appears to be unused"
+        errorLine1="    &lt;color name=&quot;seventy_percent_black_overlay&quot;>#b2000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.adrien_poupa` appears to be unused"
+        errorLine1="    &lt;string name=&quot;adrien_poupa&quot; translatable=&quot;false&quot;>Adrien Poupa&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/donottranslate.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.google_plus` appears to be unused"
+        errorLine1="    &lt;string name=&quot;google_plus&quot; translatable=&quot;false&quot;>Google Plus&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/donottranslate.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.git_hub` appears to be unused"
+        errorLine1="    &lt;string name=&quot;git_hub&quot; translatable=&quot;false&quot;>GitHub&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/donottranslate.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.twitter` appears to be unused"
+        errorLine1="    &lt;string name=&quot;twitter&quot; translatable=&quot;false&quot;>Twitter&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/donottranslate.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.license_dialog_style` appears to be unused"
+        errorLine1="    &lt;string name=&quot;license_dialog_style&quot; translatable=&quot;false&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/donottranslate.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_lock_open` appears to be unused"
+        errorLine1="&lt;vector android:height=&quot;192dp&quot; android:tint=&quot;#FFFFFF&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_baseline_lock_open.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_email_white_24dp` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_email_white_24dp.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_monochrome` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_monochrome.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_send_white_24dp` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_send_white_24dp.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.remove_song_x_from_playlist` appears to be unused"
+        errorLine1="    &lt;string name=&quot;remove_song_x_from_playlist&quot;>&lt;![CDATA[Remove the song &lt;b>%1$s&lt;/b> from the playlist?]]&gt;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.remove_song_from_playlist_title` appears to be unused"
+        errorLine1="    &lt;string name=&quot;remove_song_from_playlist_title&quot;>Remove song from playlist&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_header_album` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_header_album&quot;>Album&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="145"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_header_lockscreen` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_header_lockscreen&quot;>Lockscreen&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="150"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.author` appears to be unused"
+        errorLine1="    &lt;string name=&quot;author&quot;>Author&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="258"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.write_an_email` appears to be unused"
+        errorLine1="    &lt;string name=&quot;write_an_email&quot;>Write an email&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="262"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.fork_on_github` appears to be unused"
+        errorLine1="    &lt;string name=&quot;fork_on_github&quot;>Fork on GitHub&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="263"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.visit_website` appears to be unused"
+        errorLine1="    &lt;string name=&quot;visit_website&quot;>Visit website&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="264"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.website` appears to be unused"
+        errorLine1="    &lt;string name=&quot;website&quot;>Website&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="276"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_issue` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_issue&quot;>Issue&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="313"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login` appears to be unused"
+        errorLine1="    &lt;string name=&quot;login&quot;>Login&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="314"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.description` appears to be unused"
+        errorLine1="    &lt;string name=&quot;description&quot;>Description&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="316"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_use_account` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_use_account&quot;>Send using GitHub account&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="318"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.username` appears to be unused"
+        errorLine1="    &lt;string name=&quot;username&quot;>Username&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="320"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.password` appears to be unused"
+        errorLine1="    &lt;string name=&quot;password&quot;>Password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="321"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_no_title` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_no_title&quot;>Please enter an issue title&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="322"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_no_description` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_no_description&quot;>Please enter an issue description&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="323"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_no_username` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_no_username&quot;>Please enter your valid GitHub username&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="324"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_no_password` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_no_password&quot;>Please enter your valid GitHub password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="325"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_uploading` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_uploading&quot;>Uploading report to GitHub…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="326"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_failed` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_failed&quot;>Unable to send report&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="327"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_failed_wrong_credentials` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_failed_wrong_credentials&quot;>Wrong username or password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="328"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_failed_invalid_token` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_failed_invalid_token&quot;>Invalid access token. Please contact the app developer.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="329"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_failed_issues_not_available` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_failed_issues_not_available&quot;>Issues are not enabled for the selected repository. Please contact the app developer.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="330"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.bug_report_failed_unknown` appears to be unused"
+        errorLine1="    &lt;string name=&quot;bug_report_failed_unknown&quot;>An unexpected error occurred. Please contact the app developer.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="331"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.your_account_data_is_only_used_for_authentication` appears to be unused"
+        errorLine1="    &lt;string name=&quot;your_account_data_is_only_used_for_authentication&quot;>Your account data is only used for authentication.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="333"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.write_permission` appears to be unused"
+        errorLine1="    &lt;string name=&quot;write_permission&quot;>Always ask for write permission&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="431"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.pref_summary_write_permission` appears to be unused"
+        errorLine1="    &lt;string name=&quot;pref_summary_write_permission&quot;>To revoke already granted permission, go to android settings for this app, then &amp;quot;Storage &amp;amp; cache&amp;quot; and revoke external storage&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="432"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.toolbar_gradient` appears to be unused"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/toolbar_gradient.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `FrameLayout` parent is possibly unnecessary"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/app_widget_card.xml"
+            line="7"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src\main\res\drawable\ic_launcher_monochrome.xml, src\main\res\mipmap-hdpi\ic_launcher_monochrome.png">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_monochrome.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_monochrome.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_monochrome.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_monochrome.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_monochrome.png"/>
+        <location
+            file="src/main/res/drawable/ic_launcher_monochrome.xml"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `default_album_art.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/default_album_art.png: 360x360 dp (540x540 px), drawable-mdpi/default_album_art.png: 360x360 dp (360x360 px), drawable-xhdpi/default_album_art.png: 360x360 dp (720x720 px), drawable-xxhdpi/default_album_art.png: 480x480 dp (1440x1440 px), drawable-xxxhdpi/default_album_art.png: 360x360 dp (1440x1440 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/default_album_art.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/default_album_art.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/default_album_art.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/default_album_art.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/default_album_art.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `default_album_art.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/default_album_art.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/default_album_art.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/app_widget_big.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/app_widget_big.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/app_widget_card.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/app_widget_card.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/app_widget_classic.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/app_widget_classic.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/app_widget_small.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/app_widget_small.jpg"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-hdpi`: ic_drag_vertical_white_24dp.xml, ic_notification.png, icon_web.png, np_card.png, np_flat.png... (2 more)">
+        <location
+            file="src/main/res/drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-mdpi`: ic_drag_vertical_white_24dp.xml, ic_notification.png, icon_web.png, np_card.png, np_flat.png... (2 more)">
+        <location
+            file="src/main/res/drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-xhdpi`: ic_drag_vertical_white_24dp.xml, ic_notification.png, icon_web.png, np_card.png, np_flat.png... (2 more)">
+        <location
+            file="src/main/res/drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-xxhdpi`: ic_notification.png, icon_web.png, np_card.png, np_flat.png, tutorial_queue_swipe_up.png... (1 more)">
+        <location
+            file="src/main/res/drawable-xxhdpi"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/debug/res/mipmap-hdpi/ic_launcher_round.png"/>
+        <location
+            file="src/debug/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/debug/res/mipmap-mdpi/ic_launcher_round.png"/>
+        <location
+            file="src/debug/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/debug/res/mipmap-xhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/debug/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/debug/res/mipmap-xxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/debug/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/debug/res/mipmap-xxxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/debug/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_tag_editor.xml"
+            line="54"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_tag_editor.xml"
+            line="83"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_tag_editor.xml"
+            line="101"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_tag_editor.xml"
+            line="119"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="46"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="64"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="92"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="110"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="128"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="146"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="164"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                    &lt;EditText"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="182"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_export_settings.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``ImageButton`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        nextButton.setOnTouchListener(new PrevNextButtonOnTouchListener(PrevNextButtonOnTouchListener.DIRECTION_NEXT));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/card/CardPlayerPlaybackControlsFragment.java"
+            line="165"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``ImageButton`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        prevButton.setOnTouchListener(new PrevNextButtonOnTouchListener(PrevNextButtonOnTouchListener.DIRECTION_PREVIOUS));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/card/CardPlayerPlaybackControlsFragment.java"
+            line="166"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``ImageButton`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        nextButton.setOnTouchListener(new PrevNextButtonOnTouchListener(PrevNextButtonOnTouchListener.DIRECTION_NEXT));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/flat/FlatPlayerPlaybackControlsFragment.java"
+            line="170"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``ImageButton`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        prevButton.setOnTouchListener(new PrevNextButtonOnTouchListener(PrevNextButtonOnTouchListener.DIRECTION_PREVIOUS));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/flat/FlatPlayerPlaybackControlsFragment.java"
+            line="171"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`FlingPlayBackController#onTouch` should call `View#performClick` when a click is detected"
+        errorLine1="        public boolean onTouch(View v, MotionEvent event) {"
+        errorLine2="                       ~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/MiniPlayerFragment.java"
+            line="140"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``ViewPager`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        viewPager.setOnTouchListener(new View.OnTouchListener() {"
+        errorLine2="        ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/PlayerAlbumCoverFragment.java"
+            line="66"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`onTouch` should call `View#performClick` when a click is detected"
+        errorLine1="            public boolean onTouch(View v, MotionEvent event) {"
+        errorLine2="                           ~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/fragments/player/PlayerAlbumCoverFragment.java"
+            line="79"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`PrevNextButtonOnTouchListener#onTouch` should call `View#performClick` when a click is detected"
+        errorLine1="    public boolean onTouch(View view, MotionEvent motionEvent) {"
+        errorLine2="                   ~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/helper/PrevNextButtonOnTouchListener.java"
+            line="66"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``RecyclerView`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="        recyclerView.setOnTouchListener((v, event) -> {"
+        errorLine2="        ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SearchActivity.java"
+            line="93"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`onTouch` lambda should call `View#performClick` when a click is detected"
+        errorLine1="        recyclerView.setOnTouchListener((v, event) -> {"
+        errorLine2="                                        ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/SearchActivity.java"
+            line="93"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`onTouch` lambda should call `View#performClick` when a click is detected"
+        errorLine1="            menu.setOnTouchListener((v, ev) -> {"
+        errorLine2="                                    ^">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/SongAdapter.java"
+            line="242"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view `TouchInterceptHorizontalScrollView` overrides `onTouchEvent` but not `performClick`"
+        errorLine1="    public boolean onTouchEvent(MotionEvent e) {"
+        errorLine2="                   ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/views/TouchInterceptHorizontalScrollView.java"
+            line="115"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;com.google.android.material.floatingactionbutton.FloatingActionButton"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_tag_editor.xml"
+            line="151"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;com.google.android.material.floatingactionbutton.FloatingActionButton"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_bug_report.xml"
+            line="56"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;com.google.android.material.floatingactionbutton.FloatingActionButton"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_song_tag_editor.xml"
+            line="209"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        textDeviceInfo.setText(deviceInfo + (extraInfo != null ? (&quot;\n\n&quot; + extraInfo) : &quot;&quot;));"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/ui/activities/bugreport/BugReportActivity.java"
+            line="54"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        songTitle.setText(adapter.dataSet.get(position).getTitle() + &quot; &quot; + snackBarTitle);"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/poupa/vinylmusicplayer/adapter/song/PlayingQueueAdapter.java"
+            line="319"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry"
+        errorLine1="        android:paddingLeft=&quot;@dimen/md_listitem_control_margin&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_library_categories_listitem.xml"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="        android:paddingStart=&quot;@dimen/md_listitem_control_margin&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_library_categories_listitem.xml"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="85"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="86"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="94"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="95"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="124"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="125"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="133"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="134"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="154"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="155"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="163"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="164"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="184"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="185"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="193"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_album_detail.xml"
+            line="194"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="85"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="86"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="94"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="95"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="115"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="116"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="124"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="125"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="145"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                        android:paddingRight=&quot;16dp&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="146"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginLeft=&quot;0dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="154"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="                            android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_artist_detail.xml"
+            line="155"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignParentLeft`; already defining `layout_alignParentStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/app_widget_classic.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="    android:paddingLeft=&quot;12dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bread_crumb.xml"
+            line="12"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="    android:paddingRight=&quot;4dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bread_crumb.xml"
+            line="13"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="        android:paddingRight=&quot;8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bread_crumb.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="63"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="108"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="139"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="170"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_about_app.xml"
+            line="201"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_support_development.xml"
+            line="51"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_marginLeft=&quot;32dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/card_support_development.xml"
+            line="95"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_toRightOf=&quot;@id/timer_display&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_sleep_timer.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="                android:layout_toRightOf=&quot;@+id/cover_container&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_card_player.xml"
+            line="45"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_toRightOf=&quot;@+id/cover_container&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_flat_player.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginRight=&quot;-8dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toLeftOf`; already defining `layout_toStartOf` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_toLeftOf=&quot;@+id/player_play_pause__button&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginLeft=&quot;-8dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_toRightOf=&quot;@+id/player_play_pause__button&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="85"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignParentLeft`; already defining `layout_alignParentStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginLeft=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_alignParentRight`; already defining `layout_alignParentEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="112"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginRight=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_flat_player_playback_controls.xml"
+            line="115"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingLeft=&quot;60dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_folder.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingRight=&quot;8dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_folder.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginRight=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_mini_player.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="    android:layout_marginRight=&quot;8dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_grid_card_horizontal.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginLeft=&quot;-8dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                android:paddingLeft=&quot;16dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="41"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                android:paddingRight=&quot;0dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="42"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="                android:paddingLeft=&quot;16dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="84"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="                android:paddingRight=&quot;0dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="85"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="            android:layout_marginLeft=&quot;72dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list.xml"
+            line="133"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_marginLeft=&quot;-8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_no_image.xml"
+            line="20"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingLeft=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_no_image.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingRight=&quot;0dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_no_image.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_marginLeft=&quot;72dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_no_image.xml"
+            line="98"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_marginLeft=&quot;-8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="20"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingLeft=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingRight=&quot;0dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingLeft=&quot;16dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingRight`; already defining `paddingEnd` with `targetSdkVersion` 37"
+        errorLine1="            android:paddingRight=&quot;0dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginLeft`; already defining `layout_marginStart` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_marginLeft=&quot;72dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_list_single_row.xml"
+            line="138"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_marginRight`; already defining `layout_marginEnd` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_marginRight=&quot;2dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/notification.xml"
+            line="84"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_toRightOf=&quot;@id/image&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/notification_big.xml"
+            line="43"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `layout_toRightOf`; already defining `layout_toEndOf` with `targetSdkVersion` 37"
+        errorLine1="        android:layout_toRightOf=&quot;@id/image&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/notification_big.xml"
+            line="90"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Redundant attribute `paddingLeft`; already defining `paddingStart` with `targetSdkVersion` 37"
+        errorLine1="        android:paddingLeft=&quot;@dimen/md_listitem_control_margin&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_library_categories_listitem.xml"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;20dp&quot;` to better support right-to-left layouts"
+        errorLine1="    android:paddingLeft=&quot;20dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_rg_preamp.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="    android:paddingRight=&quot;10dp&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/preference_dialog_rg_preamp.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+</issues>

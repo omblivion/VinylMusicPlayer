@@ -1,11 +1,10 @@
 package com.poupa.vinylmusicplayer;
 
 import android.content.Context;
+import android.app.Application;
 import android.content.res.Resources;
-import android.os.Build;
 
 import androidx.annotation.NonNull;
-import androidx.multidex.MultiDexApplication;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.poupa.vinylmusicplayer.appshortcuts.DynamicShortcutManager;
@@ -18,9 +17,9 @@ import com.poupa.vinylmusicplayer.model.Song;
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
-public class App extends MultiDexApplication {
+public class App extends Application {
     public static final String TAG = App.class.getSimpleName();
-    public static final boolean DYNAMICS_PROCESSING_AVAILABLE = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P;
+    public static final boolean DYNAMICS_PROCESSING_AVAILABLE = true;
 
     private static App app;
 
@@ -44,9 +43,7 @@ public class App extends MultiDexApplication {
         }
 
         // Set up dynamic shortcuts
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            new DynamicShortcutManager(this).initDynamicShortcuts();
-        }
+        new DynamicShortcutManager(this).initDynamicShortcuts();
 
         // setup discography
         discography = new Discography();

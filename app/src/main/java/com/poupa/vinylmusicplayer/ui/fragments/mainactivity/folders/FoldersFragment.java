@@ -394,7 +394,7 @@ public class FoldersFragment
                     
                     // Rescan if whitelist enabled
                     if (PreferenceUtil.getInstance().getWhitelistEnabled()) {
-                        requireContext().sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED));
+                        requireContext().sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED).setPackage(requireContext().getPackageName()));
                     }  
                   
                     return true;

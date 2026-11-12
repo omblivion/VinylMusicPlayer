@@ -311,7 +311,7 @@ public class MusicUtil {
             PlaylistsUtil.addToPlaylist(context, song, getOrCreateFavoritesPlaylist(context).id, false);
         }
 
-        context.sendBroadcast(new Intent(MusicService.FAVORITE_STATE_CHANGED));
+        context.sendBroadcast(new Intent(MusicService.FAVORITE_STATE_CHANGED).setPackage(context.getPackageName()));
     }
 
     public static boolean isArtistNameUnknown(@Nullable String artistName) {

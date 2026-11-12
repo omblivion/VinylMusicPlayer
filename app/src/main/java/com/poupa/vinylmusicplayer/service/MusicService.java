@@ -83,7 +83,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
 
     public static final String TAG = MusicService.class.getSimpleName();
 
-    static final String VINYL_MUSIC_PLAYER_PACKAGE_NAME = "com.poupa.vinylmusicplayer";
+    static final String VINYL_MUSIC_PLAYER_PACKAGE_NAME = com.poupa.vinylmusicplayer.BuildConfig.APPLICATION_ID;
     private static final String MUSIC_PACKAGE_NAME = "com.android.music";
 
     public static final String ACTION_TOGGLE_PAUSE = VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".togglepause";
@@ -101,7 +101,8 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
     public static final String APP_WIDGET_UPDATE = VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".appwidgetupdate";
     public static final String EXTRA_APP_WIDGET_NAME = VINYL_MUSIC_PLAYER_PACKAGE_NAME + "app_widget_name";
 
-    // Do not change these three strings as it will break support with other apps (e.g. last.fm scrobbling)
+    // Internal events belong to this installation. sendPublicIntent preserves the
+    // com.android.music protocol used by external scrobblers.
     public static final String META_CHANGED = VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".metachanged";
     public static final String QUEUE_CHANGED = VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".queuechanged";
     public static final String PLAY_STATE_CHANGED = VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".playstatechanged";
@@ -247,8 +248,8 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
 
         uiThreadHandler = new Handler();
 
-        registerReceiver(widgetIntentReceiver, new IntentFilter(APP_WIDGET_UPDATE));
-        registerReceiver(updateFavoriteReceiver, new IntentFilter(FAVORITE_STATE_CHANGED));
+        registerReceiver(widgetIntentReceiver, new IntentFilter(APP_WIDGET_UPDATE), Context.RECEIVER_NOT_EXPORTED);
+        registerReceiver(updateFavoriteReceiver, new IntentFilter(FAVORITE_STATE_CHANGED), Context.RECEIVER_NOT_EXPORTED);
 
         initNotification();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -269,7 +270,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
         mPackageValidator = new PackageValidator(this, R.xml.allowed_media_browser_callers);
         mBrowsableMusicProvider = new BrowsableMusicProvider(this);
 
-        sendBroadcast(new Intent(VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".VINYL_MUSIC_PLAYER_MUSIC_SERVICE_CREATED"));
+        sendBroadcast(new Intent(VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".MUSIC_SERVICE_CREATED").setPackage(getPackageName()));
 
         Discography.getInstance().addChangedListener(onDiscographyChanged);
         mediaStoreObserver.onChange(true);
@@ -291,7 +292,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
         PendingIntent mediaButtonReceiverPendingIntent = PendingIntentCompat.getBroadcast(this, 0, mediaButtonIntent, 0);
 
         MediaSessionCallback mMediaSessionCallback = new MediaSessionCallback(this);
-        mediaSession = new MediaSessionCompat(this, "VinylMusicPlayer", mediaButtonReceiverComponentName, mediaButtonReceiverPendingIntent);
+        mediaSession = new MediaSessionCompat(this, "NeedleMusicPlayer", mediaButtonReceiverComponentName, mediaButtonReceiverPendingIntent);
         mediaSession.setCallback(mMediaSessionCallback);
         mediaSession.setActive(true);
         mediaSession.setMediaButtonReceiver(mediaButtonReceiverPendingIntent);
@@ -392,7 +393,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
         PreferenceUtil.getInstance().unregisterOnSharedPreferenceChangedListener(this);
         wakeLock.release();
 
-        sendBroadcast(new Intent(VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".VINYL_MUSIC_PLAYER_MUSIC_SERVICE_DESTROYED"));
+        sendBroadcast(new Intent(VINYL_MUSIC_PLAYER_PACKAGE_NAME + ".MUSIC_SERVICE_DESTROYED").setPackage(getPackageName()));
     }
 
     @Override
@@ -514,7 +515,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
         stopForeground(true);
 
         closeAudioEffectSession();
-        getAudioManager().abandonAudioFocus(audioFocusListener);
+        getAudioManager().abandonAudioFocusRequest(focusRequest);
         stopSelf();
     }
 
@@ -1020,7 +1021,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
                     } else {
                         playback.start();
                         if (!becomingNoisyReceiverRegistered) {
-                            registerReceiver(becomingNoisyReceiver, becomingNoisyReceiverIntentFilter);
+                            registerReceiver(becomingNoisyReceiver, becomingNoisyReceiverIntentFilter, Context.RECEIVER_NOT_EXPORTED);
                             becomingNoisyReceiverRegistered = true;
                         }
                         if (notHandledMetaChangedForCurrentTrack) {
@@ -1160,7 +1161,7 @@ public class MusicService extends MediaBrowserServiceCompat implements SharedPre
     }
 
     private void sendChangeInternal(final String what) {
-        sendBroadcast(new Intent(what));
+        sendBroadcast(new Intent(what).setPackage(getPackageName()));
         appWidgetBig.notifyChange(this, what);
         appWidgetClassic.notifyChange(this, what);
         appWidgetSmall.notifyChange(this, what);

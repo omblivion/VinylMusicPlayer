@@ -44,8 +44,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private static final String WEBSITE = "https://adrien.poupa.fr/";
 
-    private static final String RATE_ON_GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=com.poupa.vinylmusicplayer";
-
     private ActivityAboutBinding layoutBinding;
 
     @Override
@@ -195,7 +193,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         layoutBinding.content.cardAboutApp.licenses.setOnClickListener(this);
         layoutBinding.content.cardAboutApp.forkOnGithub.setOnClickListener(this);
         layoutBinding.content.cardSupportDevelopment.reportBugs.setOnClickListener(this);
-        layoutBinding.content.cardSupportDevelopment.rateOnGooglePlay.setOnClickListener(this);
+        // There is no Needle store listing yet; do not redirect users to Vinyl.
+        layoutBinding.content.cardSupportDevelopment.rateOnGooglePlay.setVisibility(View.GONE);
     }
 
     @Override
@@ -229,8 +228,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             openUrl(GITHUB);
         } else if (v == layoutBinding.content.cardSupportDevelopment.reportBugs) {
             startActivity(new Intent(this, BugReportActivity.class));
-        } else if (v == layoutBinding.content.cardSupportDevelopment.rateOnGooglePlay) {
-            openUrl(RATE_ON_GOOGLE_PLAY);
         }
     }
 

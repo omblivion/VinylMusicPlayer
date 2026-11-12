@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.ColorInt;
+import androidx.activity.OnBackPressedCallback;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
@@ -28,7 +29,24 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
 
         setTheme(PreferenceUtil.getInstance().getGeneralTheme());
         super.onCreate(savedInstanceState);
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (!handleBackPressed()) {
+                    setEnabled(false);
+                    try {
+                        getOnBackPressedDispatcher().onBackPressed();
+                    } finally {
+                        setEnabled(true);
+                    }
+                }
+            }
+        });
         MaterialDialogsUtil.updateMaterialDialogsThemeSingleton(this);
+    }
+
+    protected boolean handleBackPressed() {
+        return false;
     }
 
     @Override

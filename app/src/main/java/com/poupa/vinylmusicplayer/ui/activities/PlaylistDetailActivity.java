@@ -175,7 +175,7 @@ public class PlaylistDetailActivity
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         final int id = item.getItemId();
         if (id == android.R.id.home) {
-            onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
             return true;
         } else if (id == R.id.action_song_sort_group_by_album) {
             item.setChecked(!item.isChecked()); // toggle
@@ -190,9 +190,9 @@ public class PlaylistDetailActivity
     }
 
     @Override
-    public void onBackPressed() {
+    protected boolean handleBackPressed() {
         layoutBinding.recyclerView.stopScroll();
-        super.onBackPressed();
+        return super.handleBackPressed();
     }
 
     @Override

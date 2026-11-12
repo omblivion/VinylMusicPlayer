@@ -295,7 +295,7 @@ public class AlbumDetailActivity
             DeleteSongsHelper.delete(songs, getSupportFragmentManager(), "DELETE_SONGS");
             return true;
         } else if (id == android.R.id.home) {
-            super.onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
             return true;
         } else if (id == R.id.action_tag_editor) {
             final Intent intent = new Intent(this, AlbumTagEditorActivity.class);
@@ -337,9 +337,9 @@ public class AlbumDetailActivity
     }
 
     @Override
-    public void onBackPressed() {
+    protected boolean handleBackPressed() {
         layoutBinding.list.stopScroll();
-        super.onBackPressed();
+        return super.handleBackPressed();
     }
 
     @Override
