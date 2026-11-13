@@ -46,3 +46,6 @@ tags
 app/release/
 
 keystore.properties
+*.jks
+*.keystore
+*.p12

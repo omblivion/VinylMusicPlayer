@@ -3,6 +3,8 @@
 # Fetch the licenses of code under VCS and licenses of dependencies
 # and render it in a HTML page to be included in the about dialog
 
+set -euo pipefail
+
 function log_error()
 {
   local message="$*"
@@ -17,8 +19,9 @@ all_licenses="${workdir}/all-licenses.csv"
 cat /dev/null > "${all_licenses}"
 
 # ---- The license of the app itself
-app_license='Vinyl Music Player;;GNU General Public License v3;https://github.com/VinylMusicPlayer/VinylMusicPlayer/blob/master/LICENSE.txt'
+app_license='Needle Music Player;Independent fork of Vinyl Music Player and Phonograph;GNU General Public License v3;https://github.com/omblivion/VinylMusicPlayer/blob/master/LICENSE.txt'
 echo "${app_license}" >> "${all_licenses}"
+echo 'Vinyl Music Player;Upstream project and original contributors;GNU General Public License v3;https://github.com/VinylMusicPlayer/VinylMusicPlayer/blob/master/LICENSE.txt' >> "${all_licenses}"
 
 # ---- The license of the imported source code
 licensed_source_code=( $(grep --recursive --files-with-matches "License" app/src) )
@@ -69,7 +72,7 @@ function known_licensed_source_code()
 
 # ---- The licenses of used libraries
 licensed_dependencies="${workdir}/dependencies-licenses.csv"
-./gradlew --no-configuration-cache --rerun-tasks licenseCiDebugReport
+./gradlew --no-configuration-cache licenseFdroidReleaseReport
 
 function known_licensed_library()
 {
@@ -86,13 +89,13 @@ function known_licensed_library()
       ;;
   esac
 }
-cat "${licensed_dependencies}" | while read -r line; do
+while IFS= read -r line || [ -n "${line}" ]; do
   IFS=';' read -r -a tokens <<< "${line}"
 
-  dep_name="${tokens[0]}"
-  dep_desc="${tokens[1]}"
-  dep_license="${tokens[2]}"
-  dep_license_url="${tokens[3]}"
+  dep_name="${tokens[0]:-}"
+  dep_desc="${tokens[1]:-}"
+  dep_license="${tokens[2]:-}"
+  dep_license_url="${tokens[3]:-}"
 
   if [ -z "${dep_name}" ]; then
     log_error "Cannot unnamed dependencies: ${line}"
@@ -105,20 +108,20 @@ cat "${licensed_dependencies}" | while read -r line; do
     fi
   fi
   echo "${line}" >> "${all_licenses}"
-done
+done < "${licensed_dependencies}"
 
 # ---- Now build the license page
 licenses_md="app/src/main/assets/LICENSES.md"
 {
   echo "# Licenses"
 
-  cat "${all_licenses}" | while read -r line; do
+  while IFS= read -r line || [ -n "${line}" ]; do
     IFS=';' read -r -a tokens <<< "${line}"
 
-    dep_name="${tokens[0]}"
-    dep_desc="${tokens[1]}"
-    dep_license="${tokens[2]}"
-    dep_license_url="${tokens[3]}"
+    dep_name="${tokens[0]:-}"
+    dep_desc="${tokens[1]:-}"
+    dep_license="${tokens[2]:-}"
+    dep_license_url="${tokens[3]:-}"
 
     cat << ITEM
 ## ${dep_name}
@@ -129,7 +132,7 @@ ${dep_desc}
 
 ---
 ITEM
-  done
+  done < "${all_licenses}"
 } > ${licenses_md}
 
 echo "Wrote license to ${licenses_md}"

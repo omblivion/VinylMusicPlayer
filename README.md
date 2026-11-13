@@ -4,6 +4,10 @@
 
 A local music player for **Android 14 and newer**, being modernized for Android 17.
 
+## Test pre-release 0.0.1
+
+The [0.0.1 test pre-release](https://github.com/omblivion/VinylMusicPlayer/releases/tag/v0.0.1) provides separate signed **release** and **debug** APKs plus SHA-256 checksums. This is an experimental maintenance/compatibility checkpoint, not a stable release or completion of the backlog. See the [release notes](docs/releases/0.0.1.md) for verified behavior and limitations. Release and debug installations have independent data.
+
 Needle is an independent fork of [Vinyl Music Player](https://github.com/VinylMusicPlayer/VinylMusicPlayer), itself forked from [Phonograph](https://github.com/kabouzeid/Phonograph). It retains the [GPL v3 license](LICENSE.txt) and upstream attribution. The old Vinyl store listings are not Needle releases.
 
 Application ID: `org.needlemusicplayer.android`. Debug builds use `.debug` and CI builds use `.ci`. Needle and Vinyl can coexist; Needle starts with its own settings, database and playlists. Music files in shared storage are still the same physical files: editing tags or deleting a file affects that file for every player.
@@ -27,6 +31,8 @@ Pinned build tools: AGP **9.5.1**, Gradle **9.6.0**, compile/target SDK **37**, 
 ```
 
 The debug APK is in `app/build/outputs/apk/fdroid/debug/`. The release APK is optimized but unsigned unless a signing configuration is provided. No upstream signing keys are required for local builds. Do not commit signing credentials.
+
+Before packaging a release, regenerate the bundled direct-dependency license inventory with `bash ./script/build-licenses-page` (Git Bash on Windows). Published release APKs are separately aligned and signed using Needle's private signing key kept outside the repository; the unsigned local Gradle output is not the downloadable signed release APK.
 
 CI builds and checks Needle without publishing to any store. Android 14–17 device testing, including background playback and SD card editing, is required before a release; compilation and JVM tests alone do not certify compatibility.
 

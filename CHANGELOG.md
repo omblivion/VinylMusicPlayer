@@ -1,5 +1,19 @@
 # Changelog
 
+## Needle [0.0.1] - 2026-11-13 — Test pre-release
+
+First experimental Needle build, focused on restoring maintenance and fixing the inherited Android compatibility baseline. This is not a stable release and does not resolve the entire backlog.
+
+- Independent Needle identity, icon and application data; Android 14 minimum and Android 17 target.
+- Updated build tools and selected maintained dependencies.
+- Fixed required/optional permission handling and stale permission-denial messages.
+- Updated foreground media-service declarations and internal broadcast targeting.
+- Fixed Back navigation, status-bar backdrop and mini-player placement/visibility with gesture and three-button navigation.
+- Android 17 emulator smoke checks and 26 JVM/Robolectric tests; optimized release and debuggable APKs provided separately.
+- Media3, legacy asynchronous/UI components, complete storage/format/device coverage and inherited lint debt remain open.
+
+The entries below describe the original Vinyl project, not earlier Needle releases.
+
 ## [1.11.0] - 2024-08-18
 
 ### Features
