@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class PlaylistsUtil {
     public static void notifyChange(@NonNull final Context context) {
-        context.sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED));
+        context.sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED).setPackage(context.getPackageName()));
     }
 
     public static boolean doesPlaylistExist(final String name) {

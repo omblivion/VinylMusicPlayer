@@ -131,16 +131,16 @@ public class GenreDetailActivity extends AbsSlidingMusicPanelActivity
             MusicPlayerRemote.openAndShuffleQueue(songs, true);
             return true;
         } else if (id == android.R.id.home) {
-            onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    public void onBackPressed() {
+    protected boolean handleBackPressed() {
         layoutBinding.recyclerView.stopScroll();
-        super.onBackPressed();
+        return super.handleBackPressed();
     }
 
     @Override

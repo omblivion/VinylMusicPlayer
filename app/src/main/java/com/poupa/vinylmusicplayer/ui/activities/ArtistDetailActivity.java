@@ -321,7 +321,7 @@ public class ArtistDetailActivity
             AddToPlaylistDialog.create(songs).show(getSupportFragmentManager(), "ADD_PLAYLIST");
             return true;
         } else if (id == android.R.id.home) {
-            super.onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
             return true;
         } else if (id == R.id.action_biography) {
             if (biographyDialog == null) {
@@ -361,9 +361,9 @@ public class ArtistDetailActivity
     }
 
     @Override
-    public void onBackPressed() {
+    protected boolean handleBackPressed() {
         albumRecyclerView.stopScroll();
-        super.onBackPressed();
+        return super.handleBackPressed();
     }
 
     @Override

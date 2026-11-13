@@ -588,7 +588,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                     }
                 }
             } else if (TextUtils.equals(key, PreferenceUtil.WHITELIST_ENABLED)) {
-                getContext().sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED));
+                getContext().sendBroadcast(new Intent(MusicService.MEDIA_STORE_CHANGED).setPackage(requireContext().getPackageName()));
             } else if (TextUtils.equals(key, PreferenceUtil.RECENTLY_PLAYED_CUTOFF_V2)
                     || TextUtils.equals(key, PreferenceUtil.NOT_RECENTLY_PLAYED_CUTOFF_V2)
                     || TextUtils.equals(key, PreferenceUtil.LAST_ADDED_CUTOFF_V2)

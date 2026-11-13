@@ -7,8 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
-import android.os.Build;
-import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.IBinder;
 
@@ -96,7 +94,7 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
             filter.addAction(MusicService.MEDIA_STORE_CHANGED);
             filter.addAction(MusicService.FAVORITE_STATE_CHANGED);
 
-            registerReceiver(musicStateReceiver, filter);
+            registerReceiver(musicStateReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
 
             receiverRegistered = true;
         }
@@ -219,23 +217,14 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
         super.onHasPermissionsChanged(hasPermissions);
         Intent intent = new Intent(MusicService.MEDIA_STORE_CHANGED);
         intent.putExtra("from_permissions_changed", true); // just in case we need to know this at some point
-        sendBroadcast(intent);
+        sendBroadcast(intent.setPackage(getPackageName()));
     }
 
     @Nullable
     @Override
     protected String[] getPermissionsToRequest() {
-        if (Build.VERSION.SDK_INT < VERSION_CODES.R) { // API less or equal to 29
-            return new String[] { Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE };
-        } else if (Build.VERSION.SDK_INT < VERSION_CODES.TIRAMISU) { // API less than 33
-            return new String[] { Manifest.permission.READ_EXTERNAL_STORAGE };
-        } else {
-            return new String[] {
-                    // Audio is really necessary for the app to work, images is only useful for cover
-                    Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.READ_MEDIA_IMAGES,
-                    // Post "non-exempt" notifications, ie. those not linked to media session/foreground service
-                    Manifest.permission.POST_NOTIFICATIONS
-            };
-        }
+        // Selected artwork is accessed through a system picker. Notification permission
+        // is optional: media session notifications are exempt from that permission.
+        return new String[] { Manifest.permission.READ_MEDIA_AUDIO };
     }
 }

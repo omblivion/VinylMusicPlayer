@@ -1,7 +1,14 @@
 # Licenses
+## Needle Music Player
+
+Independent fork of Vinyl Music Player and Phonograph
+
+ - [GNU General Public License v3](https://github.com/omblivion/VinylMusicPlayer/blob/master/LICENSE.txt)
+
+---
 ## Vinyl Music Player
 
-
+Upstream project and original contributors
 
  - [GNU General Public License v3](https://github.com/VinylMusicPlayer/VinylMusicPlayer/blob/master/LICENSE.txt)
 
@@ -41,27 +48,6 @@ RecyclerView extension library which provides advanced features. (ex. swiping, d
  - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 ---
-## androidx.appcompat.appcompat - Android AppCompat Library
-
-The Support Library is a static library that you can add to your Android application in order to use APIs that are either not available for older platform versions or utility APIs that aren't a part of the framework APIs. Compatible on devices running API 14 or later.
-
- - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-
----
-## androidx.constraintlayout.constraintlayout - Android ConstraintLayout
-
-ConstraintLayout for Android
-
- - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-
----
-## androidx.multidex.multidex - Android Multi-Dex Library
-
-Library for legacy multi-dex support
-
- - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-
----
 ## androidx.percentlayout.percentlayout - Android Percent Support Library
 
 Android Percent Support Library
@@ -83,13 +69,6 @@ Android Support Grid Layout
  - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 ---
-## androidx.recyclerview.recyclerview - Android Support RecyclerView
-
-Android Support RecyclerView
-
- - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
-
----
 ## com.github.ksoichiro.android-observablescrollview - Android-ObservableScrollView
 
 Android library to observe scroll events on scrollable views.
@@ -100,6 +79,20 @@ Android library to observe scroll events on scrollable views.
 ## androidx.annotation.annotation - Annotation
 
 Provides source annotations for tooling and readability.
+
+ - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+---
+## androidx.appcompat.appcompat - AppCompat
+
+Provides backwards-compatible implementations of UI-related Android SDK functionality, including dark mode and Material theming.
+
+ - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+---
+## androidx.constraintlayout.constraintlayout - ConstraintLayout
+
+This library offers a flexible and adaptable way to position and animate widgets
 
  - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
@@ -183,7 +176,7 @@ Markwon plugin to linkify text (based on Android Linkify)
 ---
 ## com.google.android.material.material - Material Components for Android
 
-Material Components for Android is a static library that you can add to your Android application in order to use APIs that provide implementations of the Material Design specification. Compatible on devices running API 14 or later.
+Material Components for Android is a static library that you can add to your Android application in order to use APIs that provide implementations of the Material Design specification. Compatible on devices running API 23 or later.
 
  - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
@@ -219,6 +212,13 @@ The Support Library is a static library that you can add to your Android applica
 ## androidx.palette.palette-ktx - Palette Kotlin Extensions
 
 Kotlin extensions for 'palette' artifact
+
+ - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+---
+## androidx.recyclerview.recyclerview - RecyclerView
+
+Android Support RecyclerView
 
  - [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
@@ -296,6 +296,13 @@ The aim of this project is to provide a world class Java library       for editi
 ## com.github.kabouzeid.AndroidSlidingUpPanel - kabouzeid/AndroidSlidingUpPanel
 
 This library provides a simple way to add a draggable sliding up panel (popularized by Google Music and Google Maps) to your Android application. Brought to you by Umano.
+
+ - [Apache License 2.0](https://api.github.com/licenses/apache-2.0)
+
+---
+## com.github.kabouzeid.app-theme-helper - kabouzeid/app-theme-helper
+
+A helper library for app-level theming for Android developers.
 
  - [Apache License 2.0](https://api.github.com/licenses/apache-2.0)
 

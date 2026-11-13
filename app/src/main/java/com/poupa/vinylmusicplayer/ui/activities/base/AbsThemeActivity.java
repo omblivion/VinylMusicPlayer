@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.ColorInt;
+import androidx.activity.OnBackPressedCallback;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
@@ -28,7 +29,24 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
 
         setTheme(PreferenceUtil.getInstance().getGeneralTheme());
         super.onCreate(savedInstanceState);
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (!handleBackPressed()) {
+                    setEnabled(false);
+                    try {
+                        getOnBackPressedDispatcher().onBackPressed();
+                    } finally {
+                        setEnabled(true);
+                    }
+                }
+            }
+        });
         MaterialDialogsUtil.updateMaterialDialogsThemeSingleton(this);
+    }
+
+    protected boolean handleBackPressed() {
+        return false;
     }
 
     @Override
@@ -44,15 +62,17 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
     }
 
     public void setStatusbarColor(int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(color);
-            setLightStatusbarAuto(color);
-        } else {
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Edge-to-edge ignores Window.setStatusBarColor. Paint the backdrop
+            // that already reserves the status-bar inset in our layouts.
             final View statusBar = getWindow().getDecorView().getRootView().findViewById(R.id.status_bar);
             if (statusBar != null) {
                 statusBar.setBackgroundColor(color);
             }
+        } else {
+            getWindow().setStatusBarColor(color);
         }
+        setLightStatusbarAuto(color);
     }
 
     public void setStatusbarColorAuto() {

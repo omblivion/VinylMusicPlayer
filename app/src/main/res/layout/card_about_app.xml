@@ -24,7 +24,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/icon_web"
+                android:src="@mipmap/ic_launcher"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -171,7 +171,7 @@
                 android:layout_marginStart="32dp"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp"
-                android:text="@string/fork_on_github"
+                android:text="@string/upstream_source_code"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
         </LinearLayout>

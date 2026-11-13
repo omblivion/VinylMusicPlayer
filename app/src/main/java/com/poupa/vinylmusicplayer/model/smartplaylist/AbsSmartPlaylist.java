@@ -30,14 +30,14 @@ public abstract class AbsSmartPlaylist extends AbsCustomPlaylist {
 
     public void clear(@NonNull Context context) {
         // Notify app of clear event, so that the smart playlists are refreshed
-        if (isClearable()) context.sendBroadcast(new Intent(MusicService.META_CHANGED));
+        if (isClearable()) context.sendBroadcast(new Intent(MusicService.META_CHANGED).setPackage(context.getPackageName()));
     }
 
     public boolean canImport() {return false;}
 
     public void importPlaylist(@NonNull Context context, @NonNull Playlist playlist) {
         // Notify app of the event, so that the smart playlists are refreshed
-        if (canImport()) context.sendBroadcast(new Intent(MusicService.META_CHANGED));
+        if (canImport()) context.sendBroadcast(new Intent(MusicService.META_CHANGED).setPackage(context.getPackageName()));
     }
 
     @Nullable

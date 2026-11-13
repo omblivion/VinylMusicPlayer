@@ -26,6 +26,7 @@ import com.poupa.vinylmusicplayer.ui.fragments.player.NowPlayingScreen;
 import com.poupa.vinylmusicplayer.ui.fragments.player.card.CardPlayerFragment;
 import com.poupa.vinylmusicplayer.ui.fragments.player.flat.FlatPlayerFragment;
 import com.poupa.vinylmusicplayer.util.PreferenceUtil;
+import com.poupa.vinylmusicplayer.util.PlaybackInsets;
 import com.poupa.vinylmusicplayer.util.ViewUtil;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -241,13 +242,15 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
     protected SlidingMusicPanelLayoutBinding createSlidingMusicPanel() {
         SlidingMusicPanelLayoutBinding binding = SlidingMusicPanelLayoutBinding.inflate(getLayoutInflater());
         slidingUpPanelLayout = binding.slidingLayout;
+        // Keep system-bar padding outside the legacy panel: its drag math assumes
+        // unpadded coordinates and can otherwise put the controls into HIDDEN.
+        PlaybackInsets.apply(binding.getRoot());
         return binding;
     }
 
     @Override
-    public void onBackPressed() {
-        if (!handleBackPress())
-            super.onBackPressed();
+    protected boolean handleBackPressed() {
+        return handleBackPress() || super.handleBackPressed();
     }
 
     public boolean handleBackPress() {

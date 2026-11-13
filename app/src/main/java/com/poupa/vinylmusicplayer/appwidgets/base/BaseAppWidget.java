@@ -55,7 +55,7 @@ public abstract class BaseAppWidget extends AppWidgetProvider {
     public void onUpdate(final Context context, final AppWidgetManager appWidgetManager,
                          final int[] appWidgetIds) {
         defaultAppWidget(context, appWidgetIds);
-        final Intent updateIntent = new Intent(MusicService.APP_WIDGET_UPDATE);
+        final Intent updateIntent = new Intent(MusicService.APP_WIDGET_UPDATE).setPackage(context.getPackageName());
         updateIntent.putExtra(MusicService.EXTRA_APP_WIDGET_NAME, NAME);
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
         updateIntent.addFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);

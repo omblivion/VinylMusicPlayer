@@ -1,0 +1,6 @@
+# Keep wrapper scripts runnable on their target platforms.
+* text=auto
+gradlew text eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jar binary

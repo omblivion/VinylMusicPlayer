@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="upstream_source_code">Codice sorgente originale di Vinyl</string>
     <string name="what_do_you_want_to_share">Cosa vuoi condividere?</string>
     <string name="currently_listening_to_x_by_x">Stai ascoltando %1$s di %2$s.</string>
     <string name="the_audio_file">Il file audio</string>
@@ -224,7 +225,7 @@
     <string name="report_bugs">Segnala bug</string>
     <string name="report_bugs_summary">Segnala bug o richiedi nuove funzionalità.</string>
     <string name="rate_on_google_play">Valuta</string>
-    <string name="rate_on_google_play_summary">Lascia una valutazione positiva su Google Play se ti piace Vinyl Music Player.</string>
+    <string name="rate_on_google_play_summary">Lascia una valutazione positiva su Google Play se ti piace Needle Music Player.</string>
     <string name="aidan_follestad_summary">Per il theme engine e altre cose fantastiche.</string>
     <string name="karim_abou_zeid_summary">L\'autore originale.</string>
     <string name="michael_cook_summary">Per la bella icona in stile material.</string>
@@ -234,7 +235,7 @@
     <string name="up_next">A seguire</string>
     <string name="pref_title_now_playing_screen_appearance">Aspetto</string>
     <string name="intro_label">Introduzione</string>
-    <string name="welcome_to_vinyl_music_player">"Benvenuto in Vinyl Music Player, un music player bellissimo e leggero per Android. "</string>
+    <string name="welcome_to_vinyl_music_player">"Benvenuto in Needle Music Player, un music player bellissimo e leggero per Android. "</string>
     <string name="open_playing_queue_instruction">Fai uno swipe sulla card nella schermata In riproduzione per mostrare l\'intera coda di riproduzione.</string>
     <string name="rearrange_playing_queue_instruction">Riorganizza la coda di riproduzione trascinando un brano dal suo numero di traccia.</string>
     <string name="library">Libreria</string>
@@ -250,10 +251,10 @@
     <string name="could_not_scan_files">Non è stato possibile effettuare la scansione di %d file.</string>
     <string name="listing_files">Lettura dei file</string>
     <string name="new_start_directory">%s è la nuova directory iniziale.</string>
-    <string name="app_widget_big_name">Vinyl Music Player - Grande</string>
-    <string name="app_widget_classic_name">Vinyl Music Player - Classico</string>
-    <string name="app_widget_small_name">Vinyl Music Player - Piccolo</string>
-    <string name="app_widget_card_name">Vinyl Music Player - Scheda</string>
+    <string name="app_widget_big_name">Needle Music Player - Grande</string>
+    <string name="app_widget_classic_name">Needle Music Player - Classico</string>
+    <string name="app_widget_small_name">Needle Music Player - Piccolo</string>
+    <string name="app_widget_card_name">Needle Music Player - Scheda</string>
     <string name="report_an_issue">Segnala un problema</string>
     <string name="bug_report_issue">Problema</string>
     <string name="login">Accesso</string>
@@ -309,7 +310,7 @@
     <string name="sort_order_date_added">Data di agfgiunta</string>
     <string name="finish_current_music_sleep_timer">Finisci ultimo brano</string>
     <string name="dialog_ringtone_title">Imposta come suoneria</string>
-    <string name="dialog_ringtone_message">Permetti a Vinyl Music Player nella prossima schermata di modificare le impostazioni di sistema prima di impostare la suoneria.</string>
+    <string name="dialog_ringtone_message">Permetti a Needle Music Player nella prossima schermata di modificare le impostazioni di sistema prima di impostare la suoneria.</string>
     <string name="action_scan_directory">Scansiona cartella</string>
     <string name="reset_discography">Riscansiona libreria</string>
     <string name="none">Nessuno</string>
