@@ -27,6 +27,7 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
     private boolean hadPermissions;
     private String[] permissions;
     private String permissionDeniedMessage;
+    private Snackbar permissionSnackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
     protected void onResume() {
         super.onResume();
         final boolean hasPermissions = hasPermissions();
+        if (hasPermissions) dismissPermissionMessage();
         if (hasPermissions != hadPermissions) {
             hadPermissions = hasPermissions;
             onHasPermissionsChanged(hasPermissions);
@@ -59,6 +61,13 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
 
     protected void onHasPermissionsChanged(boolean hasPermissions) {
         // implemented by sub classes
+    }
+
+    private void dismissPermissionMessage() {
+        if (permissionSnackbar != null) {
+            permissionSnackbar.dismiss();
+            permissionSnackbar = null;
+        }
     }
 
     @Nullable
@@ -105,7 +114,9 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
                     final String message = getPermissionDeniedMessage();
                     try {
                         final View container = getSnackBarContainer();
+                        dismissPermissionMessage();
                         final Snackbar snackbar = Snackbar.make(container, message, BaseTransientBottomBar.LENGTH_INDEFINITE);
+                        permissionSnackbar = snackbar;
 
                         if (i < permissions.length && ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[i])) {
                             //User has denied from permission dialog
@@ -137,6 +148,7 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
                 }
             }
             hadPermissions = hasPermissions();
+            if (hadPermissions) dismissPermissionMessage();
             onHasPermissionsChanged(hadPermissions);
         }
     }

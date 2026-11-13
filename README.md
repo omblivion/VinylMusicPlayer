@@ -32,6 +32,8 @@ CI builds and checks Needle without publishing to any store. Android 14–17 dev
 
 Lint blocks new errors. `app/lint-baseline.xml` records inherited debt (17 errors and 404 warnings at this checkpoint), not fixes: synchronous playback/thread constraints, cursor/adapter issues and other legacy findings remain to be addressed. Media3, asynchronous-work and abandoned-UI-library migrations are still pending; see the [progress ledger](docs/superpowers/plans/2026-11-12-needle-progress.md).
 
+The Android17/API37 emulator smoke check covers install/startup, audio-permission denial/recovery, short WAV playback with notifications denied and screen off, media-button pause/resume, expanded-player Back navigation, and mini-player placement with gesture/three-button navigation. These checks do not establish complete feature parity. The [runtime test procedure](docs/testing/android-smoke.md) describes the remaining checks.
+
 ## Artwork and history
 
 Needle's source icon and banner are in `art/`. Regenerate launcher assets with `python script/generate-needle-icons.py` (Pillow >= 12.1). The supplied originals are kept unchanged.

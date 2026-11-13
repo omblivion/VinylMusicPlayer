@@ -242,7 +242,9 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
     protected SlidingMusicPanelLayoutBinding createSlidingMusicPanel() {
         SlidingMusicPanelLayoutBinding binding = SlidingMusicPanelLayoutBinding.inflate(getLayoutInflater());
         slidingUpPanelLayout = binding.slidingLayout;
-        PlaybackInsets.apply(slidingUpPanelLayout);
+        // Keep system-bar padding outside the legacy panel: its drag math assumes
+        // unpadded coordinates and can otherwise put the controls into HIDDEN.
+        PlaybackInsets.apply(binding.getRoot());
         return binding;
     }
 

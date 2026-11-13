@@ -62,15 +62,17 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
     }
 
     public void setStatusbarColor(int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(color);
-            setLightStatusbarAuto(color);
-        } else {
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Edge-to-edge ignores Window.setStatusBarColor. Paint the backdrop
+            // that already reserves the status-bar inset in our layouts.
             final View statusBar = getWindow().getDecorView().getRootView().findViewById(R.id.status_bar);
             if (statusBar != null) {
                 statusBar.setBackgroundColor(color);
             }
+        } else {
+            getWindow().setStatusBarColor(color);
         }
+        setLightStatusbarAuto(color);
     }
 
     public void setStatusbarColorAuto() {
