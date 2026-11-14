@@ -15,6 +15,7 @@ import com.poupa.vinylmusicplayer.model.Artist;
 import com.poupa.vinylmusicplayer.model.Genre;
 import com.poupa.vinylmusicplayer.model.Song;
 import com.poupa.vinylmusicplayer.provider.BlacklistStore;
+import com.poupa.vinylmusicplayer.search.SearchSnapshot;
 import com.poupa.vinylmusicplayer.sort.SongSortOrder;
 import com.poupa.vinylmusicplayer.ui.activities.base.AbsMusicServiceActivity;
 import com.poupa.vinylmusicplayer.util.FileUtil;
@@ -47,6 +48,26 @@ public class Discography implements MusicServiceEventListener {
     // TODO wrap this inside the MemCache class
     private final DB database = new DB();
     private final MemCache cache = new MemCache();
+    private long searchRevision;
+
+    public long getSearchRevision() {
+        synchronized (cache) {
+            return searchRevision;
+        }
+    }
+
+    /** Capture only; normalization, full-album merging and sorting happen off this lock. */
+    public SearchSnapshot.Source captureSearchLibrary() {
+        synchronized (cache) {
+            List<Album> slices = new ArrayList<>();
+            for (Map<Long, MemCache.AlbumSlice> byArtist : cache.albumsByAlbumIdAndArtistId.values()) {
+                slices.addAll(byArtist.values());
+            }
+            return new SearchSnapshot.Source(searchRevision,
+                    new ArrayList<>(cache.songsById.values()),
+                    new ArrayList<>(cache.artistsById.values()), slices);
+        }
+    }
 
     private final Map<AbsMusicServiceActivity, Handler> attachedActivitiesAndQueue = new HashMap<>();
     private static final String TASK_QUEUE_COALESCENCE_TOKEN = "Discography.triggerSyncWithMediaStore";
@@ -338,6 +359,7 @@ public class Discography implements MusicServiceEventListener {
             song.genres = normalizedGenres;
 
             cache.addSong(song);
+            searchRevision++;
 
             if (!cacheOnly) {
                 database.addSong(song);
@@ -490,6 +512,7 @@ public class Discography implements MusicServiceEventListener {
         if (songIds.isEmpty()) return;
 
         for (final long songId : songIds) {
+            if (cache.songsById.containsKey(songId)) searchRevision++;
             cache.removeSongById(songId);
             database.removeSongById(songId);
         }
@@ -497,8 +520,11 @@ public class Discography implements MusicServiceEventListener {
     }
 
     void clear() {
-        database.clear();
-        cache.clear();
+        synchronized (cache) {
+            database.clear();
+            cache.clear();
+            searchRevision++;
+        }
     }
 
     private void fetchAllSongs() {
