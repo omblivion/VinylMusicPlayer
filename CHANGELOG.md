@@ -1,5 +1,17 @@
 # Changelog
 
+## Needle [0.0.2] - 2026-11-14 — Test pre-release
+
+Experimental pre-release focused on search responsiveness. Not stable, not a full backlog resolution.
+
+- Search no longer rebuilds and re-sorts the whole library on every keystroke: results come from a reusable prepared snapshot.
+- Superseded queries are discarded, so stale results for a previous query can no longer appear under the new text.
+- Added a distinct "searching" state, separate from "no results"; whitespace input clears immediately.
+- Fixed search showing no results after audio permission was lost and re-granted: the typed query is preserved.
+- Added debug-only, content-free search timing instrumentation to measure latency on a real device (no query text, titles, artists or paths captured).
+- 47 JVM/Robolectric tests; Android 17 emulator checks for query replacement, rotation, Back and permission revocation/re-grant.
+- Search latency target (p95 visible results ≤500 ms) still to be measured on the user's phone; indexing/incremental-scan improvements remain open.
+
 ## Needle [0.0.1] - 2026-11-13 — Test pre-release
 
 First experimental Needle build, focused on restoring maintenance and fixing the inherited Android compatibility baseline. This is not a stable release and does not resolve the entire backlog.
