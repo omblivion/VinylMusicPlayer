@@ -12,8 +12,15 @@
 
 ## Checklist
 - [x] Task 1: detached search snapshot/cache, regression tests, full suite.
-- [ ] Task 2: debounced controller/UI/lifecycle, regression tests, full suite/build/lint.
+- [x] Task 2: debounced controller/UI/lifecycle, regression tests, full suite/build/lint.
 - [ ] Task 3: privacy-safe timings, emulator checks, self-review; Pixel installation/benchmark requires separate permission.
+
+## Task 2 evidence
+- RED: SearchController and the activity's Listener entry points did not exist; the first GREEN attempt exposed a pre-existing service-binding NPE in the Robolectric fixture, fixed in test code only.
+- Task 2: Ruling: fixed 200 ms refresh window instead of a trailing-only debounce — a trailing timer let a continuous import stream postpone every update — cost: at most one extra rebuild per 200 ms burst.
+- Task 2: Ruling: the activity is the controller listener and calls its own Listener methods — avoids a production callback adapter used only by tests — cost: test-only entry points are public on the activity.
+- Task 2: Ruling: the search-screen unit test declares MusicService unbindable — that fixture tests query/state/lifecycle, not service binding — cost: service-binding behavior is not covered by these tests.
+- GREEN: `testFdroidDebugUnitTest lintFdroidDebug assembleFdroidDebug` → BUILD SUCCESSFUL in 1m29s, 43 tests 0 failures/errors, lint no new issues (17 errors/403 warnings baseline).
 
 ## Task 1 evidence
 - RED: new search/capture tests fail compilation because SearchSnapshot/SearchRepository and capture/revision methods do not exist (expected missing interfaces).

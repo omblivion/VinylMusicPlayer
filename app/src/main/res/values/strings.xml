@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="search_in_progress">Searching…</string>
+    <string name="search_error">Search failed. Submit your search to retry.</string>
     <string name="upstream_source_code">Vinyl upstream source code</string>
     <string name="what_do_you_want_to_share">What do you want to share?</string>
     <string name="currently_listening_to_x_by_x">Currently listening to %1$s by %2$s.</string>
