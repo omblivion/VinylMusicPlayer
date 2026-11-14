@@ -18,6 +18,17 @@ public class SearchRepository {
         this.library = library;
     }
 
+    /** True when the next {@link #getSnapshot} call can reuse the cached snapshot without capture. */
+    public boolean isSnapshotWarm() {
+        SearchSnapshot cached = snapshot;
+        if (cached == null) return false;
+        PreferenceUtil preferences = PreferenceUtil.getInstance();
+        Key requested = new Key(library.getSearchRevision(), invalidation,
+                preferences.getSongSortOrder(), preferences.getArtistSortOrder(),
+                preferences.getAlbumSortOrder(), Locale.getDefault().toLanguageTag());
+        return requested.equals(key);
+    }
+
     public SearchSnapshot getSnapshot(BooleanSupplier cancelled) {
         SearchSnapshot.checkCancelled(cancelled);
         PreferenceUtil preferences = PreferenceUtil.getInstance();

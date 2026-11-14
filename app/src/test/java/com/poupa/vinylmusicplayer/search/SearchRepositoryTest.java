@@ -21,8 +21,7 @@ public class SearchRepositoryTest {
         int captures;
         long revision = 1;
         @Override public long getSearchRevision() { return revision; }
-        @Override public SearchSnapshot.Source captureSearchLibrary() {
-            captures++;
+        @Override public SearchSnapshot.Source captureSearchLibrary() {            captures++;
             return SearchFixtures.library(3736, revision);
         }
     }

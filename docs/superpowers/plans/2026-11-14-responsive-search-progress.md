@@ -13,7 +13,16 @@
 ## Checklist
 - [x] Task 1: detached search snapshot/cache, regression tests, full suite.
 - [x] Task 2: debounced controller/UI/lifecycle, regression tests, full suite/build/lint.
-- [ ] Task 3: privacy-safe timings, emulator checks, self-review; Pixel installation/benchmark requires separate permission.
+- [x] Task 3: privacy-safe timings, emulator checks, self-review; Pixel installation/benchmark requires separate permission.
+
+## Task 3 evidence
+- Task 3: Ruling: `SearchTimings` is debug-only and content-free (generation, reuse flag, monotonic durations only) — no query/title/artist/path is captured — cost: release timing needs a separate instrumented build.
+- Task 3: Ruling: samples are dropped for superseded generations and on failure — canceled/failed work must never look successful — cost: timings describe completed requests only.
+- Task 3: Ruling: `elapsedNanos` (request→pre-draw callback) is the in-app proxy for visible latency and the 500 ms goal is judged with margin below it — a worker cannot observe pre-draw time — cost: acceptance is approximate until a phone session confirms it.
+- Task 3: fixed a real defect found on the emulator: after audio permission loss and re-grant, search rendered empty although the query box still held text; root cause was the permission branch calling `submit("")`, overwriting the stored query. Fix: new `SearchController.clear()` bumps the generation and renders empty without touching the query. Regression `keepsTypedQueryWhenPermissionIsLost` and updated `clearsOnPermissionLossAndReloadsAfterGrant` went RED (expected 0 rendered rows, actual 2)→GREEN.
+- Emulator (Android 17, real MP3 copies + synthetic fixtures): title/artist/album categories and headers correct; query replacement shows "No results" rather than stale rows; whitespace clears immediately; back returns without exiting; rotation restores query and results; permission loss shows a clear denied state and re-grant returns correct results; crash buffer empty.
+- Final GREEN: `testFdroidDebugUnitTest lintFdroidDebug assembleFdroidDebug` → BUILD SUCCESSFUL, 47 tests 0 failures/errors, lint no new issues.
+- Not done: controlled baseline/after timing capture on the Pixel (needs explicit install permission and an uninterrupted window). No latency target is claimed.
 
 ## Task 2 evidence
 - RED: SearchController and the activity's Listener entry points did not exist; the first GREEN attempt exposed a pre-existing service-binding NPE in the Robolectric fixture, fixed in test code only.

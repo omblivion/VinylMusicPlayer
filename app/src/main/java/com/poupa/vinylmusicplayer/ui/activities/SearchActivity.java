@@ -199,10 +199,15 @@ public class SearchActivity extends AbsMusicServiceActivity implements SearchVie
         if (hasPermissions()) {
             controller.submit(query);
         } else {
-            controller.submit("");
+            // Clear visible/results state without discarding the user's typed query.
+            controller.clear();
             searchState.repository.clear();
             empty.setVisibility(View.GONE);
         }
+    }
+
+    public String getSavedQuery() {
+        return query;
     }
 
     @Override protected void onHasPermissionsChanged(boolean hasPermissions) {

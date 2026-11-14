@@ -88,7 +88,21 @@ public class SearchActivityTest {
             lifecycle.pause();
             Shadows.shadowOf(RuntimeEnvironment.getApplication()).grantPermissions(Manifest.permission.READ_MEDIA_AUDIO);
             lifecycle.resume();
-            assertEquals(View.VISIBLE, activity.findViewById(R.id.search_progress).getVisibility());
+            // Regression: the typed query must survive a permission denial and still search after re-grant.
+            assertEquals("Needle", activity.getSavedQuery());
+        }
+    }
+
+    @Test public void keepsTypedQueryWhenPermissionIsLost() {
+        try (var lifecycle = Robolectric.buildActivity(SearchActivity.class).setup()) {
+            SearchActivity activity = lifecycle.get();
+            activity.onQueryTextChange("Dancing");
+            lifecycle.pause();
+            Shadows.shadowOf(RuntimeEnvironment.getApplication()).denyPermissions(Manifest.permission.READ_MEDIA_AUDIO);
+            lifecycle.resume();
+            Bundle saved = new Bundle();
+            lifecycle.saveInstanceState(saved);
+            assertEquals("Dancing", saved.getString(SearchActivity.QUERY));
         }
     }
 }

@@ -17,6 +17,7 @@ public final class SearchController implements AutoCloseable {
         void onPending();
         void onResults(List<Object> results);
         void onError();
+        default void onTiming(SearchTimings.Sample sample) {}
     }
 
     private final SearchRepository repository;
@@ -51,6 +52,14 @@ public final class SearchController implements AutoCloseable {
         post(() -> launch(request, submitted), 150);
     }
 
+    /** Clears rendered results without changing the current query text. */
+    public void clear() {
+        if (closed) return;
+        cancelWork();
+        generation++;
+        listener.onResults(Collections.emptyList());
+    }
+
     /** Fixed-window coalescing: continuous imports cannot postpone all updates indefinitely. */
     public void refresh() {
         if (closed || refreshScheduled || query.trim().isEmpty()) return;
@@ -68,12 +77,21 @@ public final class SearchController implements AutoCloseable {
     private void launch(long request, String submitted) {
         if (!current(request)) return;
         BooleanSupplier cancelled = () -> !current(request);
+        long queued = SearchTimings.now();
         running = worker.submit(() -> {
             try {
+                long snapshotStart = SearchTimings.now();
+                boolean hit = repository.isSnapshotWarm();
                 SearchSnapshot snapshot = repository.getSnapshot(cancelled);
+                long snapshotEnd = SearchTimings.now();
                 List<Object> results = snapshot.search(submitted, cancelled);
+                long matchEnd = SearchTimings.now();
                 post(() -> {
-                    if (current(request)) listener.onResults(results);
+                    if (current(request)) {
+                        listener.onResults(results);
+                        SearchTimings.report(listener, request, hit, queued, snapshotStart,
+                                snapshotEnd - snapshotStart, matchEnd - snapshotEnd);
+                    }
                 }, 0);
             } catch (CancellationException ignored) {
                 // Superseded work has no UI/error side effects.
