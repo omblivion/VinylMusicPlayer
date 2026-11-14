@@ -31,6 +31,17 @@
 - No Critical/Important findings left unresolved. Minor items deferred to the next phase and to the user.
 - Deferred minors: per-match deep copies add allocation on very large result sets; no explicit search test for canonically-unequal-but-visually-confusable strings beyond NFD; search-performance.md Pixel section still empty until an approved session.
 
+## Release 0.0.2 publication (2026-11-14)
+- User authorized: new release branch, version/changelog bump, push, and publishing the GitHub release.
+- Branch `release/0.0.2` created from `feature/needle-modernization`, pushed to origin. Commits 0a25ad5f..774ed617 carry the four search commits plus the version bump.
+- versionCode 2 / versionName 0.0.2; CHANGELOG entry and Italian release notes at `docs/releases/0.0.2.md`.
+- Ruling: built the signed release as the `playStore` variant, not `fdroid` — only `playStore`/`ci` declare the ci signing config, and it carries the same `org.needlemusicplayer.android` ID — cost: the release artifact comes from the playStore flavor while debug comes from fdroid.
+- Signing used the Needle key from `~/.android/needle-signing` via a temporary `keystore.properties` override, restored immediately after; the file is unchanged in Git.
+- Release APK verified: versionCode 2, versionName 0.0.2, `org.needlemusicplayer.android`, min 34 / target 37, certificate SHA-256 6206a266f18c58651ef619de6c79ee217bb1bbe22cd61067e668727b0c8a73a5 (same as 0.0.1). Debug APK: `org.needlemusicplayer.android.debug`, versionName `0.0.2 DEBUG`.
+- Published GitHub pre-release v0.0.2 with release APK, debug APK and SHA256SUMS.txt: https://github.com/omblivion/VinylMusicPlayer/releases/tag/v0.0.2. Prerelease, not draft; no merge to master.
+- Superseded by this decision: the earlier "no publication in this plan" constraint applied to the search plan only; the user then explicitly authorized this release.
+- Not done: hosting CI run for this tag, phone install of 0.0.2, and the pixel latency session.
+
 ## Task 2 evidence
 - RED: SearchController and the activity's Listener entry points did not exist; the first GREEN attempt exposed a pre-existing service-binding NPE in the Robolectric fixture, fixed in test code only.
 - Task 2: Ruling: fixed 200 ms refresh window instead of a trailing-only debounce — a trailing timer let a continuous import stream postpone every update — cost: at most one extra rebuild per 200 ms burst.
