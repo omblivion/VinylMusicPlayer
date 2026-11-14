@@ -24,6 +24,13 @@
 - Final GREEN: `testFdroidDebugUnitTest lintFdroidDebug assembleFdroidDebug` → BUILD SUCCESSFUL, 47 tests 0 failures/errors, lint no new issues.
 - Not done: controlled baseline/after timing capture on the Pixel (needs explicit install permission and an uninterrupted window). No latency target is claimed.
 
+## Final review (self-review, no subagent per user instruction)
+- Whole-branch range reviewed: 541dfac9..73d28add.
+- Final: Ruling: `SearchSnapshot.search` copies only matching/included models on output — makes the API hard to misuse into readers mutating the index — cost: see deferred minor on per-match copy overhead.
+- Final: Ruling: kept a separate one-snapshot epoch from the library revision — permission-clear on the main thread must not be undone by an in-flight worker — cost: an extra volatile field to reason about.
+- No Critical/Important findings left unresolved. Minor items deferred to the next phase and to the user.
+- Deferred minors: per-match deep copies add allocation on very large result sets; no explicit search test for canonically-unequal-but-visually-confusable strings beyond NFD; search-performance.md Pixel section still empty until an approved session.
+
 ## Task 2 evidence
 - RED: SearchController and the activity's Listener entry points did not exist; the first GREEN attempt exposed a pre-existing service-binding NPE in the Robolectric fixture, fixed in test code only.
 - Task 2: Ruling: fixed 200 ms refresh window instead of a trailing-only debounce — a trailing timer let a continuous import stream postpone every update — cost: at most one extra rebuild per 200 ms burst.
